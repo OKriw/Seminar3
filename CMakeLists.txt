@@ -16,5 +16,6 @@ add_executable(TTimer
         StorageSql.cpp
         main.cpp)
 
+set(SQLITE3_LIBRARIES "sqlite3")
 target_link_libraries(TTimer ${SQLITE3_LIBRARIES})
 set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lsqlite3")
