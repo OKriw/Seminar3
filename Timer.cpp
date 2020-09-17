@@ -6,6 +6,7 @@
 #include <iostream>
 #include <string>
 #include <sstream>
+#include <iomanip>
 #include "Timer.h"
 
 using std::chrono::steady_clock;
@@ -19,7 +20,8 @@ using std::cout;
 using std::endl;
 using std::string;
 using std::stringstream;
-using std::to_string;
+using std::setw;
+using std::setfill;
 
 Timer::Timer() {}
 void Timer::start_timer() {
@@ -56,9 +58,10 @@ int Timer::get_elapsed_time(char fmt) {
 string Timer::format_elapsed_time() {
 	string result;
 	stringstream str;
-	str << to_string(get_elapsed_time('h')) << ":";
-	str << to_string(get_elapsed_time('m')) << ":";
-	str << to_string(get_elapsed_time('s')) << endl;
+	// Each number must be write in 2 digits
+	str << setw(2) << setfill('0') << get_elapsed_time('h') << ":";
+	str << setw(2) << setfill('0') << get_elapsed_time('m') << ":";
+	str << setw(2) << setfill('0') << get_elapsed_time('s') << endl;
 	str >> result;
 	return result;
 };
