@@ -146,21 +146,15 @@ public:
  Я хочу чтобы вы реализовали класс Mng.h, который отвечает за проверку всех поставленных условий, а так же запускает, останавливает и удаляет задачу.
  Кстати сразу вопрос - почему у класса приватный конструктор? Как это называется и зачем это нужно?
  
- Теперь остается последний класс, тот кто будет сообщать менаджеру задач что вы хотите сделать. Это класс Client.h с единственным методом run.
+ Теперь остается последний класс, тот кто будет сообщать менаджеру задач что вы хотите сделать. 
+ Это класс Client.h с единственным методом run.
  Класс Client непосредственно принимает ваши запросы, парсит их и передает менаджеру, который их и обрабатывает. 
  Сразу возникает вопос как мы будем создавать и связывать Client и Mgr? Какие есть варианты?
- <pre>
-help  see this message
-Usage:
-option <arg>
-create <task name> --create task with name <task_name>
-start <task name>  --start task with name <task_name>
-stop --stop current task
-stat <task name>/<all>  --display statistics
-quit --quit task tracker
-quit
-
- </pre>
+ комманды:
+ create/start/stop task_name - create/start/stop task with task name task_name
+ help - display message with usage information
+ stat all/task_name - display statistics. For now only for current task.
+ quit - leave timer applicaton
  
  В результате при запуске вашего приложения я хочу увидеть:
 <pre>
@@ -168,10 +162,6 @@ Olgas-MacBook-Pro:TTimer olga$ ./cmake-build-debug/TTimer -s mem -o out -c clien
 Found argument mem
 Found argument out
 Found argument client
-Getting instance of the manager
-Manager is created
-Client created
-Manager is connected
 create Task1
 start Task1
 stop Task1
@@ -190,5 +180,5 @@ stop Task2
 stat Task2
 Task2 --  00:00:19
  </pre>
- Теперь открываем master и и пишем=)
+
  
