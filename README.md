@@ -105,10 +105,90 @@ git commit -m "<message for commit>"
 Olgas-MacBook-Pro:TTimer olga$ ./cmake-build-debug/TTimer -s mem
 Found argument mem
 ```
+```
+Olgas-MacBook-Pro:TTimer olga$ ./cmake-build-debug/TTimer -s mem -o out -c client
+Found argument mem
+Found argument out
+Found argument client
+```
 Пока это заглушка котоая не влияет на нашу пограмму, однако чуть позже мы начнем менять поведение таймера зависимо от заданных ключей.
 
+Давайте теперь вернемся к классу Task и подумаем о жизненном цикле task и ее состояниях. И попытаемся договорится о правилах которым будет следовать
+наше приложение.
+
+<pre>
+Task.h:
+ enum states {
+    stopped, //initial state
+    running,
+    deleted //when we want to delete from the storage
+};
+class Task {
+private:
+    ...
+    bool isValid(states new_state);
+    states state;
+public:
+    ...
+    bool isRunning();
+    bool isStopped();
+    bool isDeleted();
+    states getState();
+    ...
+    void delete_t();
+};
+ </pre>
  
- State machine:
+  ![State 1](State.png)
+ Мы видим новое поле и несколько функций. Теперь Task хранит не только имя и таймер, но и состояние текущей задачи. Зачем?
+ Квкой класс мы реализуем следующим? Надеюсь к этому моменту становится понятно, что нам нужен конечный автомат. Это некоторая прослойка между командами и
+ и Task, которая решает можно ли запустить, удалить или остановить таску.
+ Я хочу чтобы вы реализовали класс Mng.h, который отвечает за проверку всех поставленных условий, а так же запускает, останавливает и удаляет задачу.
+ Кстати сразу вопрос - почему у класса приватный конструктор? Как это называется и зачем это нужно?
  
+ Теперь остается последний класс, тот кто будет сообщать менаджеру задач что вы хотите сделать. Это класс Client.h с единственным методом run.
+ Класс Client непосредственно принимает ваши запросы, парсит их и передает менаджеру, который их и обрабатывает. 
+ Сразу возникает вопос как мы будем создавать и связывать Client и Mgr? Какие есть варианты?
+ <pre>
+help  see this message
+Usage:
+option <arg>
+create <task name> --create task with name <task_name>
+start <task name>  --start task with name <task_name>
+stop --stop current task
+stat <task name>/<all>  --display statistics
+quit --quit task tracker
+quit
+
+ </pre>
  
-  
+ В результате при запуске вашего приложения я хочу увидеть:
+<pre>
+Olgas-MacBook-Pro:TTimer olga$ ./cmake-build-debug/TTimer -s mem -o out -c client
+Found argument mem
+Found argument out
+Found argument client
+Getting instance of the manager
+Manager is created
+Client created
+Manager is connected
+create Task1
+start Task1
+stop Task1
+stat Task1
+Task1 --  00:00:05
+create Task2
+stop Task2
+Error stopping task Task2, state: 0
+start Task2
+startTask2
+OPTION UNKNOWN
+use 'help' to get help
+start Task2
+Error starting task Task2 ,state: 1
+stop Task2
+stat Task2
+Task2 --  00:00:19
+ </pre>
+ Теперь открываем master и и пишем=)
+ 
