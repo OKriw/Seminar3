@@ -159,8 +159,9 @@ stat Task2
 Task2 --  00:00:19
  </pre>
 
- Полезные ссылки:
-https://gameprogrammingpatterns.com/singleton.html
-https://gameprogrammingpatterns.com/state.html
-https://habr.com/ru/post/166201/
-https://stackoverflow.com/questions/16388510/evaluate-a-string-with-a-switch-in-c
+Полезные ссылки:
+
+* https://gameprogrammingpatterns.com/singleton.html
+* https://gameprogrammingpatterns.com/state.html
+* https://habr.com/ru/post/166201/
+* https://stackoverflow.com/questions/16388510/evaluate-a-string-with-a-switch-in-c
