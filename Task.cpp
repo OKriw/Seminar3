@@ -3,23 +3,40 @@
 //
 
 #include "Task.h"
+
 Task::Task(string tname) {
     timer = new Timer ();
     name = tname;
     time_spent = "00:00:00";
 }
-void Task::start() {
+states Task::getState() {
+    return (states)0;
+};
+bool Task::isRunning() {
+    return true;
+}
+bool Task::isDeleted() {
+    return true;
+}
+bool Task::isStopped() {
+    return true;
+}
+void Task::start(){
     timer->start_timer();
     time_spent = timer->format_elapsed_time();
 };
-void Task::stop() {
+void Task::stop(){
     timer->stop_timer();
     time_spent = timer->format_elapsed_time();
 };
+void Task::delete_t() {
+}
 void Task::statistics() {
     cout << name << " " << time_spent << endl;
 };
-int Task::time_spend() {
+void Task::clear() {
+};
+int Task::time_spend(){
     return timer->get_elapsed_time('s');
 };
 
