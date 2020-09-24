@@ -36,8 +36,8 @@ int Timer::get_elapsed_time(char fmt) {
 
 string Timer::format_elapsed_time() {
     auto hour = duration_cast<hours>(ms);
-    auto minute = duration_cast<minutes>(ms);
-    auto second = duration_cast<seconds>(ms);
+    auto minute = duration_cast<minutes>(ms) % 60;
+    auto second = duration_cast<seconds>(ms) % 60;
     stringstream stream;
     stream << setw(2) << setfill('0') << to_string(hour.count()) << ':' << setw(2) << setfill('0')
            << to_string(minute.count()) << ':' << setw(2) << setfill('0') << to_string(second.count());
