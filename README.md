@@ -1,7 +1,7 @@
 
 
 Привет! 
-Это дополнитльное задание, которое мы будем развивать несколько недель. К концу семестра мы должны получить проект
+Это дополнительное задание, которое мы будем развивать несколько недель. К концу семестра мы должны получить проект
 аналогичный https://track.toggl.com/timer.
 
 ### Часть 0
@@ -85,4 +85,83 @@ git commit -m "<message for commit>"
 
 ##### Полезные ссылки:
  * https://habr.com/ru/post/324984/ подсмотреть как использовать chrono
-  
+ 
+ ### Часть 2
+ #### Console:
+ 
+<pre>
+git checkout master - пееключаемся на мастер
+git pull - забираем к себе изменения
+</pre>
+Давайте вернемся к классу Task и подумаем о жизненном цикле task и ее состояниях. И попытаемся договорится о правилах которым будет следовать
+наше приложение.
+
+<pre>
+Task.h:
+ enum states {
+    stopped, 
+    running,
+    deleted 
+};
+class Task {
+private:
+    ...
+    bool isValid(states new_state);
+    states state;
+public:
+    ...
+    bool isRunning();
+    bool isStopped();
+    bool isDeleted();
+    states getState();
+    ...
+    void delete_t();
+};
+ </pre>
+ 
+  ![State 1](State1.png)
+ 
+ Теперь Task хранит не только имя и таймер, но и состояние текущей задачи.
+ 
+ Задача 1: реализовать класс Mgr, который отвечает за проверку корректности состояний задачи.
+ Условия - обсуждаем на семинаре.
+ Для нас важно, чтобы в нашей программе можно создать единственный экземпляр менеджера. //sigleton
+ 
+ Задача 2:
+ Реализовать класс Client который  обрабатывает ввод с консоли и понимает что подьзователь
+ хочет сделать - создать, запустить или удалить задвчу:
+ <pre>
+ create/start/stop task_name - create/start/stop task with task name task_name
+ help - вывести описание всех доступных команд
+ stat task_name - вывести время потаченное на задачу с именем task_name
+ quit - выйти из приложения
+ При введении некорректной команды печатать OPTION UNKNOWN
+ </pre>
+ Пример работы приложения:
+<pre>
+Olgas-MacBook-Pro:TTimer olga$ ./cmake-build-debug/TTimer
+create Task1
+start Task1
+stop Task1
+stat Task1
+Task1 --  00:00:05
+create Task2
+stop Task2
+Error stopping task Task2, state: 0
+start Task2
+startTask2
+OPTION UNKNOWN
+use 'help' to get help
+start Task2
+Error starting task Task2 ,state: 1
+stop Task2
+stat Task2
+Task2 --  00:00:19
+ </pre>
+
+Полезные ссылки:
+
+* https://gameprogrammingpatterns.com/singleton.html
+* https://gameprogrammingpatterns.com/state.html
+* https://habr.com/ru/post/166201/
+* https://stackoverflow.com/questions/16388510/evaluate-a-string-with-a-switch-in-c
