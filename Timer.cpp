@@ -37,8 +37,8 @@ int Timer::get_elapsed_time(char fmt) {
 string Timer::format_elapsed_time() {
     string HH="0",MM="0",SS="0",TIME="";
     hours h = duration_cast<hours>(ms);
-    minutes m = duration_cast<minutes>(ms);
-    seconds s = duration_cast<seconds>(ms);
+    minutes m = duration_cast<minutes>(ms) % 60;
+    seconds s = duration_cast<seconds>(ms) % 60;
     if (h.count() < 10)
     {
         HH.append(to_string(h.count()));
