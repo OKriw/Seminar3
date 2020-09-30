@@ -18,6 +18,8 @@ public:
     static Mgr& get_instance();
     /* обаботать команду create*/
     Task* create(string &name);
+    /* получить текущую задачу */
+    Task* get_curr();
     /* обаботать команду start*/
     void start(string name);
     /* обаботать команду stop*/

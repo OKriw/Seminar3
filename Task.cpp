@@ -8,6 +8,7 @@ Task::Task(string tname) {
     state = stopped;
     timer = new Timer();
     name = tname;
+    time_spent = "00:00:00";
 
 }
 states Task::getState() {
@@ -50,8 +51,9 @@ void Task::stop(){
     if(state == deleted)
         cout<<"Error: Task "<<name<<" is deleted"<<"\n";
     if(state == running){
-        timer->stop_timer();
         state = stopped;
+        timer->stop_timer();
+        time_spent = timer->format_elapsed_time();
     }
 };
 void Task::delete_t() {
@@ -65,11 +67,13 @@ void Task::delete_t() {
     }
 }
 void Task::statistics() {
-    cout<<"Task"<<name<<"was running for"<<timer->format_elapsed_time()<<
+    cout<<"Task "<<name<<" was running for "<<time_spent<<
     "\n"<<"Current status: "<<getState()<<"\n";
 }
 void Task::clear() {
     timer->clear_timer();
+    time_spent = "00:00:00";
+
 }
 int Task::time_spend(){
     return timer->get_elapsed_time('s');
