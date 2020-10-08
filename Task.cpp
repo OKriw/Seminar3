@@ -40,6 +40,7 @@ void Task::statistics() {
 void Task::clear() {
     time_spent = "00:00:00";
     timer->clear_timer();
+    state = stopped;
 };
 int Task::time_spend(){
     return timer->get_elapsed_time('s');
