@@ -8,4 +8,5 @@ add_executable(Seminar3
                 Timer.cpp Timer.h
                 Client.h Client.cpp
                 Mgr.cpp Mgr.h
+                Storage.h Storage.cpp
                 main.cpp)
