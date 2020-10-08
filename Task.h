@@ -22,6 +22,7 @@ public:
     string name;
     string time_spent;
     Task(string tname);
+    ~Task();
     /*вернуть true если задача исполняется*/
     bool isRunning();
     /*вернуть true если задачу остановили*/
@@ -37,6 +38,7 @@ public:
     void delete_t();
     void statistics();
     int time_spend();
+    void print();
 
 };
 #endif //TTIMER_TASK_H

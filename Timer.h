@@ -29,7 +29,6 @@ private:
     milliseconds ms = std::chrono::milliseconds(0);
 public:
     Timer();
-
     /* Начинаем отсчет времени */
     void start_timer();
 

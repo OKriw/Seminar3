@@ -5,30 +5,47 @@
 #include "Task.h"
 
 Task::Task(string tname) {
-}
+    name = tname;
+    timer = new Timer;
+    state = stopped;
+};
+Task::~Task(){
+    delete timer;
+};
+
 states Task::getState() {
-    return (states)0;
+    return state;
 };
 bool Task::isRunning() {
-    return true;
-}
+    return state==running;
+};
 bool Task::isDeleted() {
-    return true;
-}
+    return state==deleted;
+};
 bool Task::isStopped() {
-    return true;
-}
+    return state==stopped;
+};
 void Task::start(){
+    state = running;
+    timer->start_timer();
 };
 void Task::stop(){
+    timer->stop_timer();
+    state=stopped;
+    time_spent = timer->format_elapsed_time();
 };
 void Task::delete_t() {
-}
+};
 void Task::statistics() {
 };
 void Task::clear() {
-}
-int Task::time_spend(){
-    return 1;
+    timer->clear_timer();
+    time_spent = timer->format_elapsed_time();
 };
+int Task::time_spend(){
+    return timer->get_elapsed_time('s');
+};
+void Task::print() {
+    timer->print_time();
+}
 
