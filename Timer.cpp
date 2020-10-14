@@ -28,7 +28,7 @@ int Timer::get_elapsed_time(char fmt) {
     if (fmt == 'h') {
         hours hour = duration_cast<hours>(ms);
         return hour.count();
-    }else if (fmt == 'm') {
+    } else if (fmt == 'm') {
         minutes minute = duration_cast<minutes>(ms);
         return minute.count();
     } else {
