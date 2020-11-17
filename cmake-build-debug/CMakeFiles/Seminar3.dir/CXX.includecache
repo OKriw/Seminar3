@@ -1,0 +1,38 @@
+#IncludeRegexLine: ^[ 	]*[#%][ 	]*(include|import)[ 	]*[<"]([^">]+)([">])
+
+#IncludeRegexScan: ^.*$
+
+#IncludeRegexComplain: ^$
+
+#IncludeRegexTransform: 
+
+C:/Users/sidor/seminar3/Seminar3/Client.cpp
+Client.h
+C:/Users/sidor/seminar3/Seminar3/Client.h
+Mgr.h
+C:/Users/sidor/seminar3/Seminar3/Mgr.h
+
+C:/Users/sidor/seminar3/Seminar3/Client.h
+Mgr.h
+C:/Users/sidor/seminar3/Seminar3/Mgr.h
+
+C:/Users/sidor/seminar3/Seminar3/Mgr.h
+Task.h
+C:/Users/sidor/seminar3/Seminar3/Task.h
+string
+-
+
+C:/Users/sidor/seminar3/Seminar3/Task.h
+Timer.h
+C:/Users/sidor/seminar3/Seminar3/Timer.h
+
+C:/Users/sidor/seminar3/Seminar3/Timer.h
+chrono
+-
+iostream
+-
+string
+-
+sstream
+-
+
