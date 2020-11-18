@@ -118,7 +118,7 @@ CMAKE_EXE_LINKER_FLAGS_RELWITHDEBINFO:STRING=
 CMAKE_GNUtoMS:BOOL=OFF
 
 //Install path prefix, prepended onto install directories.
-CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/TaskTimer
+CMAKE_INSTALL_PREFIX:PATH=C:/Program Files (x86)/Seminar3
 
 //Path to a program.
 CMAKE_LINKER:FILEPATH=C:/Program Files (x86)/mingw-w64/i686-8.1.0-posix-dwarf-rt_v6-rev0/mingw32/bin/ld.exe
@@ -249,12 +249,6 @@ Seminar3_BINARY_DIR:STATIC=C:/Users/sidor/seminar3/Seminar3/cmake-build-debug
 
 //Value Computed by CMake
 Seminar3_SOURCE_DIR:STATIC=C:/Users/sidor/seminar3/Seminar3
-
-//Value Computed by CMake
-TaskTimer_BINARY_DIR:STATIC=C:/Users/sidor/seminar3/Seminar3/cmake-build-debug
-
-//Value Computed by CMake
-TaskTimer_SOURCE_DIR:STATIC=C:/Users/sidor/seminar3/Seminar3
 
 
 ########################

@@ -92,6 +92,12 @@
 		<Unit filename="C:/Users/sidor/seminar3/Seminar3/Mgr.h">
 			<Option target="Seminar3"/>
 		</Unit>
+		<Unit filename="C:/Users/sidor/seminar3/Seminar3/Storage.cpp">
+			<Option target="Seminar3"/>
+		</Unit>
+		<Unit filename="C:/Users/sidor/seminar3/Seminar3/Storage.h">
+			<Option target="Seminar3"/>
+		</Unit>
 		<Unit filename="C:/Users/sidor/seminar3/Seminar3/Task.cpp">
 			<Option target="Seminar3"/>
 		</Unit>

@@ -196,6 +196,33 @@ Mgr.cpp.s:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Mgr.cpp.s
 .PHONY : Mgr.cpp.s
 
+Storage.obj: Storage.cpp.obj
+
+.PHONY : Storage.obj
+
+# target to build an object file
+Storage.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.obj
+.PHONY : Storage.cpp.obj
+
+Storage.i: Storage.cpp.i
+
+.PHONY : Storage.i
+
+# target to preprocess a source file
+Storage.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.i
+.PHONY : Storage.cpp.i
+
+Storage.s: Storage.cpp.s
+
+.PHONY : Storage.s
+
+# target to generate assembly for a file
+Storage.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.s
+.PHONY : Storage.cpp.s
+
 Task.obj: Task.cpp.obj
 
 .PHONY : Task.obj
@@ -292,6 +319,9 @@ help:
 	@echo ... Mgr.obj
 	@echo ... Mgr.i
 	@echo ... Mgr.s
+	@echo ... Storage.obj
+	@echo ... Storage.i
+	@echo ... Storage.s
 	@echo ... Task.obj
 	@echo ... Task.i
 	@echo ... Task.s

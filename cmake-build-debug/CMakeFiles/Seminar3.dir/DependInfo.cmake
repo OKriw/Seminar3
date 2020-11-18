@@ -6,6 +6,7 @@ set(CMAKE_DEPENDS_LANGUAGES
 set(CMAKE_DEPENDS_CHECK_CXX
   "C:/Users/sidor/seminar3/Seminar3/Client.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/Client.cpp.obj"
   "C:/Users/sidor/seminar3/Seminar3/Mgr.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/Mgr.cpp.obj"
+  "C:/Users/sidor/seminar3/Seminar3/Storage.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/Storage.cpp.obj"
   "C:/Users/sidor/seminar3/Seminar3/Task.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/Task.cpp.obj"
   "C:/Users/sidor/seminar3/Seminar3/Timer.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/Timer.cpp.obj"
   "C:/Users/sidor/seminar3/Seminar3/main.cpp" "C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir/main.cpp.obj"

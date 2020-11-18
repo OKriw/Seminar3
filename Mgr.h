@@ -5,28 +5,29 @@
 #ifndef TTIMER_MGR_H
 #define TTIMER_MGR_H
 #include "Task.h"
+#include "Storage.h"
 #include <string>
+#include <fstream>
 
 using std::string;
 
 class Mgr {
-    /*Указатель на текущую задачу*/
-    Task* curr;
+    Task* curr = nullptr;
     Mgr();
+    Storage* storage;
 public:
-    /* получить экземпляр класса*/
-    static Mgr& get_instance();
-    /* обаботать команду create*/
+    static Mgr& get_instance(Storage* storage); //only one instance - look at singleton pattern
     Task* create(string &name);
     /* получить текущую задачу */
     Task* get_curr();
     /* обаботать команду start*/
     void start(string name);
-    /* обаботать команду stop*/
-    void stop(string name);
-    /* обаботать команду mdelete*/
+    void stop();
     void mdelete(string name);
-    /* обаботать команду print*/
-    void print();
+    void print(string name);
+    void ren(string new_name, string old_name);
+    void clear(string name);
+    void dump();
 };
+
 #endif //TTIMER_MGR_H

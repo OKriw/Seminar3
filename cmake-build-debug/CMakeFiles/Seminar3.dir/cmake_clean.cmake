@@ -1,6 +1,7 @@
 file(REMOVE_RECURSE
   "CMakeFiles/Seminar3.dir/Client.cpp.obj"
   "CMakeFiles/Seminar3.dir/Mgr.cpp.obj"
+  "CMakeFiles/Seminar3.dir/Storage.cpp.obj"
   "CMakeFiles/Seminar3.dir/Task.cpp.obj"
   "CMakeFiles/Seminar3.dir/Timer.cpp.obj"
   "CMakeFiles/Seminar3.dir/main.cpp.obj"
