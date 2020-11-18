@@ -29,13 +29,13 @@ void Client::run() {
 
         else if (op.find("stop_", 0, 4) != string::npos) {
             if (mgr->get_curr()->name == op.substr(5, op.length())) {
-                mgr->stop(op.substr(5, op.length()));
+                mgr->stop();
             } else
                 cout << "There is no task with name " << op.substr(5, op.length());
         }
         else if (op.find("stat_", 0, 4) != string::npos) {
             if (mgr->get_curr()->name == op.substr(5, op.length()))
-                mgr->print();
+                mgr->print(op.substr(5, op.length()));
             else
                 cout << "There is no task with name " << op.substr(5, op.length());
         }
