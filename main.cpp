@@ -36,7 +36,7 @@ int main(int argc, char *argv[]) {
 
     /*Create storage according to flags*/
     /*Storage*/
-    Storage *storage = new StorageMap();
+    Storage *storage = new StorageSql("tasks_olga");
     /*Initialization of our task timer*/
     Mgr *manager = &manager->get_instance(storage);
     Client *client = new Client(manager);
