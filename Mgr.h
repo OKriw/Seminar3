@@ -4,6 +4,7 @@
 
 #ifndef TTIMER_MGR_H
 #define TTIMER_MGR_H
+
 #include "Task.h"
 #include "Storage.h"
 #include <string>
@@ -12,18 +13,27 @@
 using std::string;
 
 class Mgr {
-    Task* curr = NULL;
+    Task *curr = NULL;
+
     Mgr();
-    Storage* storage;
+
+    Storage *storage;
 public:
-    static Mgr& get_instance(Storage* storage); //only one instance - look at singleton pattern
-    Task* create(string &name);
+    static Mgr &get_instance(Storage *storage); //only one instance - look at singleton pattern
+    Task *create(string &name);
+
     void start(string name);
+
     void stop();
+
     void mdelete(string name);
+
     void print(string name);
+
     void ren(string new_name, string old_name);
+
     void clear(string name);
+
     void dump();
 };
 

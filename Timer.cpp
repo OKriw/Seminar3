@@ -3,6 +3,7 @@
 //
 
 #include "Timer.h"
+
 Timer ::Timer() {}
 void Timer::start_timer() {
     start = steady_clock::now();
@@ -45,3 +46,4 @@ string Timer::format_elapsed_time() {
     stream >> result;
     return result;
 };
+

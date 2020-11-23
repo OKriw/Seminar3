@@ -8,11 +8,12 @@ Mgr::Mgr() {
     curr = nullptr;
 };
 
-Mgr& Mgr::get_instance(Storage *storage) {
+Mgr &Mgr::get_instance(Storage *storage) {
     static Mgr *manager = new Mgr();
     manager->storage = storage;
     return *manager;
 };
+
 Task* Mgr:: create(string &name){
     if (curr != nullptr && curr->isRunning()) {
         curr->stop();
@@ -83,3 +84,4 @@ void Mgr::dump() {
     }
     file_out.close();
 };
+

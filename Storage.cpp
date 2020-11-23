@@ -3,9 +3,11 @@
 //
 
 #include "Storage.h"
-StorageMap ::StorageMap() {
-    cout << "Creating storage" <<endl;
+
+StorageMap::StorageMap() {
+    cout << "Creating storage" << endl;
 }
+
 bool StorageMap :: create_t(Task *task) {
     if (storage[task->name] != nullptr) return false;
     storage[task->name] = task;
@@ -29,4 +31,5 @@ vector<Task*> StorageMap :: get_all_tasks_t() {
     }
     return task_v;
 };
-StorageMap ::~StorageMap() {};
+
+StorageMap::~StorageMap() {};
