@@ -130,17 +130,17 @@ depend:
 .PHONY : depend
 
 #=============================================================================
-# Target rules for targets named Seminar3
+# Target rules for targets named TTimer
 
 # Build rule for target.
-Seminar3: cmake_check_build_system
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 Seminar3
-.PHONY : Seminar3
+TTimer: cmake_check_build_system
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 TTimer
+.PHONY : TTimer
 
 # fast build rule for target.
-Seminar3/fast:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/build
-.PHONY : Seminar3/fast
+TTimer/fast:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/build
+.PHONY : TTimer/fast
 
 Client.obj: Client.cpp.obj
 
@@ -148,7 +148,7 @@ Client.obj: Client.cpp.obj
 
 # target to build an object file
 Client.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Client.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Client.cpp.obj
 .PHONY : Client.cpp.obj
 
 Client.i: Client.cpp.i
@@ -157,7 +157,7 @@ Client.i: Client.cpp.i
 
 # target to preprocess a source file
 Client.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Client.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Client.cpp.i
 .PHONY : Client.cpp.i
 
 Client.s: Client.cpp.s
@@ -166,7 +166,7 @@ Client.s: Client.cpp.s
 
 # target to generate assembly for a file
 Client.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Client.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Client.cpp.s
 .PHONY : Client.cpp.s
 
 Mgr.obj: Mgr.cpp.obj
@@ -175,7 +175,7 @@ Mgr.obj: Mgr.cpp.obj
 
 # target to build an object file
 Mgr.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Mgr.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Mgr.cpp.obj
 .PHONY : Mgr.cpp.obj
 
 Mgr.i: Mgr.cpp.i
@@ -184,7 +184,7 @@ Mgr.i: Mgr.cpp.i
 
 # target to preprocess a source file
 Mgr.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Mgr.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Mgr.cpp.i
 .PHONY : Mgr.cpp.i
 
 Mgr.s: Mgr.cpp.s
@@ -193,7 +193,7 @@ Mgr.s: Mgr.cpp.s
 
 # target to generate assembly for a file
 Mgr.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Mgr.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Mgr.cpp.s
 .PHONY : Mgr.cpp.s
 
 Storage.obj: Storage.cpp.obj
@@ -202,7 +202,7 @@ Storage.obj: Storage.cpp.obj
 
 # target to build an object file
 Storage.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Storage.cpp.obj
 .PHONY : Storage.cpp.obj
 
 Storage.i: Storage.cpp.i
@@ -211,7 +211,7 @@ Storage.i: Storage.cpp.i
 
 # target to preprocess a source file
 Storage.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Storage.cpp.i
 .PHONY : Storage.cpp.i
 
 Storage.s: Storage.cpp.s
@@ -220,8 +220,35 @@ Storage.s: Storage.cpp.s
 
 # target to generate assembly for a file
 Storage.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Storage.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Storage.cpp.s
 .PHONY : Storage.cpp.s
+
+StorageSql.obj: StorageSql.cpp.obj
+
+.PHONY : StorageSql.obj
+
+# target to build an object file
+StorageSql.cpp.obj:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/StorageSql.cpp.obj
+.PHONY : StorageSql.cpp.obj
+
+StorageSql.i: StorageSql.cpp.i
+
+.PHONY : StorageSql.i
+
+# target to preprocess a source file
+StorageSql.cpp.i:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/StorageSql.cpp.i
+.PHONY : StorageSql.cpp.i
+
+StorageSql.s: StorageSql.cpp.s
+
+.PHONY : StorageSql.s
+
+# target to generate assembly for a file
+StorageSql.cpp.s:
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/StorageSql.cpp.s
+.PHONY : StorageSql.cpp.s
 
 Task.obj: Task.cpp.obj
 
@@ -229,7 +256,7 @@ Task.obj: Task.cpp.obj
 
 # target to build an object file
 Task.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Task.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Task.cpp.obj
 .PHONY : Task.cpp.obj
 
 Task.i: Task.cpp.i
@@ -238,7 +265,7 @@ Task.i: Task.cpp.i
 
 # target to preprocess a source file
 Task.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Task.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Task.cpp.i
 .PHONY : Task.cpp.i
 
 Task.s: Task.cpp.s
@@ -247,7 +274,7 @@ Task.s: Task.cpp.s
 
 # target to generate assembly for a file
 Task.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Task.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Task.cpp.s
 .PHONY : Task.cpp.s
 
 Timer.obj: Timer.cpp.obj
@@ -256,7 +283,7 @@ Timer.obj: Timer.cpp.obj
 
 # target to build an object file
 Timer.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Timer.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Timer.cpp.obj
 .PHONY : Timer.cpp.obj
 
 Timer.i: Timer.cpp.i
@@ -265,7 +292,7 @@ Timer.i: Timer.cpp.i
 
 # target to preprocess a source file
 Timer.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Timer.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Timer.cpp.i
 .PHONY : Timer.cpp.i
 
 Timer.s: Timer.cpp.s
@@ -274,7 +301,7 @@ Timer.s: Timer.cpp.s
 
 # target to generate assembly for a file
 Timer.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/Timer.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/Timer.cpp.s
 .PHONY : Timer.cpp.s
 
 main.obj: main.cpp.obj
@@ -283,7 +310,7 @@ main.obj: main.cpp.obj
 
 # target to build an object file
 main.cpp.obj:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/main.cpp.obj
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/main.cpp.obj
 .PHONY : main.cpp.obj
 
 main.i: main.cpp.i
@@ -292,7 +319,7 @@ main.i: main.cpp.i
 
 # target to preprocess a source file
 main.cpp.i:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/main.cpp.i
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/main.cpp.i
 .PHONY : main.cpp.i
 
 main.s: main.cpp.s
@@ -301,7 +328,7 @@ main.s: main.cpp.s
 
 # target to generate assembly for a file
 main.cpp.s:
-	$(MAKE) $(MAKESILENT) -f CMakeFiles\Seminar3.dir\build.make CMakeFiles/Seminar3.dir/main.cpp.s
+	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/main.cpp.s
 .PHONY : main.cpp.s
 
 # Help Target
@@ -312,7 +339,7 @@ help:
 	@echo ... depend
 	@echo ... edit_cache
 	@echo ... rebuild_cache
-	@echo ... Seminar3
+	@echo ... TTimer
 	@echo ... Client.obj
 	@echo ... Client.i
 	@echo ... Client.s
@@ -322,6 +349,9 @@ help:
 	@echo ... Storage.obj
 	@echo ... Storage.i
 	@echo ... Storage.s
+	@echo ... StorageSql.obj
+	@echo ... StorageSql.i
+	@echo ... StorageSql.s
 	@echo ... Task.obj
 	@echo ... Task.i
 	@echo ... Task.s

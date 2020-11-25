@@ -1,3 +1,3 @@
-C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/Seminar3.dir
 C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/edit_cache.dir
+C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/TTimer.dir
 C:/Users/sidor/seminar3/Seminar3/cmake-build-debug/CMakeFiles/rebuild_cache.dir

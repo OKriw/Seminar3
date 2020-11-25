@@ -4,17 +4,19 @@
 
 #ifndef TTIMER_STORAGE_H
 #define TTIMER_STORAGE_H
+
 #include <string>
 #include <map>
 #include <vector>
+#include "sqlite3.h"
 #include "Task.h"
-//#include <sqlite3.h>
 
 using std::map;
 using std::string;
 using std::vector;
+
 class Storage {
-   // T *storage;
+    // T *storage;
 public:
     virtual  ~Storage() = default;
     virtual bool create_t(Task *task) = 0;
@@ -27,7 +29,7 @@ public:
 class Creator{
 public:
     virtual ~Creator() {};
-    virtual Storage *FactoryMethod() const = 0;
+    virtual Storage *FactoryMethod(string name) const = 0;
 };
 
 //class Laptop: public Device
@@ -45,8 +47,28 @@ public:
 
 class StorageMapCreator : public Creator {
 public:
-    Storage* FactoryMethod() const override {
+    Storage* FactoryMethod(string name) const    override {
         return new StorageMap();
+    }
+};
+
+class StorageSql: public Storage {
+    sqlite3 *storage; //handle for our db
+    string dbname;
+public:
+    StorageSql(string name);
+    bool create_t(Task *task);
+    void update_t(Task *task);
+    bool delete_t(Task *task);
+    Task* get_t(string name);
+    vector<Task*> get_all_tasks_t();
+    ~StorageSql();
+};
+
+class StorageSqlCreator : public Creator {
+public:
+    Storage* FactoryMethod(string name) const override {
+        return new StorageSql(name);
     }
 };
 #endif //TTIMER_STORAGE_H

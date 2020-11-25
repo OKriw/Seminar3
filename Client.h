@@ -6,6 +6,7 @@
 #define TTIMER_CLIENT_H
 
 #include "Mgr.h"
+
 /*
  * I want you to implement the easiest version - console client.
  * However, it is not the only option.
@@ -14,7 +15,9 @@
 class Client {
 public:
     Mgr *mgr;
-    Client(Mgr* manager);
+
+    Client(Mgr *manager);
+
     /* The single method of our client is run.
      * Yhis is the main loop of out project. We keep spinning and
      * processing requests till Exit command.

@@ -3,6 +3,7 @@
 //
 
 #include "Timer.h"
+
 Timer ::Timer() {}
 void Timer::start_timer() {
     start = steady_clock::now();
@@ -16,10 +17,8 @@ void Timer::stop_timer(){
 void Timer::clear_timer(){
     ms = milliseconds(0);
 };
-
 void Timer::print_time() {
     std::cout<<ms.count();
-
 };
 
 int Timer::get_elapsed_time(char fmt) {

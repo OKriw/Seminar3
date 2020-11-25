@@ -67,4 +67,3 @@ void Mgr:: print(string name){
 void Mgr::clear(string name) {}
 void Mgr::ren(string new_name, string old_name) {}
 void Mgr::dump() {}
-
