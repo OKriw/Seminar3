@@ -3,6 +3,8 @@ project(Seminar3)
 
 set(CMAKE_CXX_STANDARD 14)
 add_executable(TTimer
+        sqlite3.h
+        sqlite3.c
         Timer.h
         Timer.cpp
         Task.h
@@ -16,5 +18,4 @@ add_executable(TTimer
         StorageSql.cpp
         main.cpp)
 
-target_link_libraries(TTimer ${SQLITE3_LIBRARIES})
-set(CMAKE_CXX_FLAGS "${CMAKE_CXX_FLAGS} -lsqlite3")
+

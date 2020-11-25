@@ -40,6 +40,9 @@ public:
     states getState();
 
     // states setState();
+
+    void set_time(int seconds);
+
     void start();
 
     void stop();

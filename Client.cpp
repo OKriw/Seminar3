@@ -15,11 +15,12 @@ void Client::run() {
         if (command == "quit") break;
         else if (command == "help") {
             std::cout << "* help - displays this message\n"
-                         "* start task_name - starts given task\n"
+                         "* start task_name - starts given task (if you have another task running this task will be stopped)\n"
                          "* stop task_name - stops given task\n"
                          "* stat task_name/all - display statistics for given task or for all tasks\n"
                          "* rename new_name old_name - renames the given task. Make sure task is not running.\n"
                          "* clear task_name  - clears the timer of the given task\n"
+                         "* delete task_name - delete given task\n"
                          "* dump - dumps all tasks info into tasks_dump.txt\n"
                          "* quit - exiting timer" << endl;
         }
@@ -42,6 +43,10 @@ void Client::run() {
         else if (command == "clear") {
             cin >> name;
             mgr->clear(name);
+        }
+        else if (command == "delete") {
+            cin >> name;
+            mgr->mdelete(name);
         }
         else if (command == "dump") {
             mgr->dump();

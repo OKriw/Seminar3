@@ -31,6 +31,7 @@ private:
 public:
     Timer();
 
+    void set_time(int millisec);
     /* Начинаем отсчет времени */
     void start_timer();
 

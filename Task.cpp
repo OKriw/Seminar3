@@ -27,6 +27,11 @@ bool Task::isStopped() {
     return state == stopped;
 }
 
+void Task::set_time(int seconds) {
+    timer->set_time(seconds * 1000);
+    this->stop();
+}
+
 void Task::start(){
     timer->start_timer();
     state = running;

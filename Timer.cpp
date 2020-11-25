@@ -9,6 +9,11 @@ void Timer::start_timer() {
     start = steady_clock::now();
 };
 
+void Timer::set_time(int millisec) {
+    ms = milliseconds(millisec);
+    start = end = steady_clock::now();
+}
+
 void Timer::stop_timer(){
     end = steady_clock::now();
     ms += duration_cast<milliseconds>(end - start);

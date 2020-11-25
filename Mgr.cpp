@@ -16,7 +16,7 @@ Mgr &Mgr::get_instance(Storage *storage) {
 
 Task* Mgr:: create(string &name){
     if (curr != nullptr && curr->isRunning()) {
-        curr->stop();
+        this->stop();
     }
     if (storage->get_t(name) != nullptr) {
         curr = storage->get_t(name);
@@ -31,8 +31,13 @@ void Mgr:: start(string name){
     else cout << "Task is not stopped, can't start it" << endl;
 };
 void Mgr:: stop(){
-    if (curr->isRunning()) curr->stop();
+    if (curr->isRunning()) {
+        curr->stop();
+        storage->update_t(curr);
+        delete curr;
+    }
     else cout << "Task is not running, can't stop it" << endl;
+
 };
 void Mgr:: mdelete(string name){
     Task* cur_task = storage->get_t(name);
@@ -42,7 +47,8 @@ void Mgr:: mdelete(string name){
     }
     if (cur_task->isStopped()) {
         cur_task->delete_t();
-        storage->delete_t(curr);
+        storage->delete_t(cur_task);
+        delete cur_task;
     }
     else cout << "Task is not stopped, can't delete it" << endl;
 };
@@ -63,8 +69,11 @@ void Mgr:: print(string name){
 };
 void Mgr::clear(string name) {
     Task* cur_task = storage->get_t(name);
-    if (cur_task != nullptr) cur_task->clear();
-    if (cur_task == nullptr) cout << "Can't clear a task which is exist :) \n";
+    if (cur_task != nullptr) {
+        cur_task->clear();
+        storage->update_t(cur_task);
+    }
+    if (cur_task == nullptr) cout << "Can't clear a task which is not exist :) \n";
 };
 void Mgr::ren(string new_name, string old_name) {
     Task* task_old = storage->get_t(old_name);
