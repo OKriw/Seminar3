@@ -75,16 +75,6 @@ StorageSql ::StorageSql(string name) {
     else {
         cout << "Table created successfully\n";
     }
-   /* command = "select * from tasks";
-    result = sqlite3_exec(storage, command.c_str(), callback, 0, &errmsg);
-    if (result) {
-        cout << "ERROR in tesing table\n";
-        cout << sqlite3_errmsg(storage) << " " << result << "\n";
-        sqlite3_free(errmsg);
-    }
-    else {
-        cout << "Table tested successfully\n";
-    } */
 }
 
 //INSERT INTO tablename (field1, field2, field3) VALUES (value1, value2, value3);
@@ -92,7 +82,6 @@ bool StorageSql :: create_t(Task *task) {
     string name = task->name;
     int time = task->time_spend();
     string command = "insert into tasks values (NULL, '" + name + "', " + to_string(time) + ")";
-   // cout << command << "\n";
     char * errmsg = nullptr;
     int result = sqlite3_exec(storage, command.c_str(), callback, 0, &errmsg);
     if (result) {
@@ -137,7 +126,7 @@ Task* StorageSql :: get_t(string name) {
     string command = "select * from tasks where task_name = '" + name + "'";
     int result = sqlite3_exec(storage, command.c_str(), callback_for_select, &task, &errmsg);
     if (result) {
-        cout << "ERROR in updating task\n";
+        cout << "ERROR in getting task\n";
         cout << sqlite3_errmsg(storage) << " " << result << "\n";
         sqlite3_free(errmsg);
     }
@@ -150,7 +139,7 @@ vector<Task*> StorageSql :: get_all_tasks_t() {
     string command = "select * from tasks";
     int result = sqlite3_exec(storage, command.c_str(), callback_for_getting_tasks, &task_v, &errmsg);
     if (result) {
-        cout << "ERROR in updating task\n";
+        cout << "ERROR in getting vector of tasks\n";
         cout << sqlite3_errmsg(storage) << " " << result << "\n";
         sqlite3_free(errmsg);
     }

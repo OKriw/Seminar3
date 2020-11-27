@@ -66,6 +66,7 @@ void Mgr:: print(string name){
         return;
     }
     cur_task->statistics();
+    delete cur_task;
 };
 void Mgr::clear(string name) {
     Task* cur_task = storage->get_t(name);
@@ -84,6 +85,7 @@ void Mgr::ren(string new_name, string old_name) {
     storage->delete_t(task_old);
     task_old->name = new_name;
     storage->create_t(task_old);
+    delete task_old;
 };
 void Mgr::dump() {
     ofstream file_out("tasks_dump.txt");
