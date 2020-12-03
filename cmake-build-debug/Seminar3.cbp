@@ -116,6 +116,12 @@
 		<Unit filename="C:/Users/sidor/seminar3/Seminar3/main.cpp">
 			<Option target="TTimer"/>
 		</Unit>
+		<Unit filename="C:/Users/sidor/seminar3/Seminar3/sqlite3.c">
+			<Option target="TTimer"/>
+		</Unit>
+		<Unit filename="C:/Users/sidor/seminar3/Seminar3/sqlite3.h">
+			<Option target="TTimer"/>
+		</Unit>
 		<Unit filename="C:/Users/sidor/seminar3/Seminar3/CMakeLists.txt">
 			<Option virtualFolder="CMake Files\"/>
 		</Unit>

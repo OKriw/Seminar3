@@ -30,6 +30,7 @@ private:
 public:
     Timer();
 
+    void set_time(int millisec);
     /* Начинаем отсчет времени */
     void start_timer();
 
@@ -47,7 +48,7 @@ public:
      * char fmt = m minutes
      * char fmt = h hours
      * */
-    int get_elapsed_time(char fmt);
+    int get_elapsed_time( char fmt );
 
     /* Вернуть строку вида h:m:s */
     string format_elapsed_time();

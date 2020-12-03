@@ -52,6 +52,7 @@ public:
 
     int time_spend();
 
+    void set_time(int seconds);
 };
 
 #endif //TTIMER_TASK_H

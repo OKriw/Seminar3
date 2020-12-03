@@ -9,14 +9,14 @@ StorageMap::StorageMap() {
 }
 
 bool StorageMap :: create_t(Task *task) {
-    storage[task->name] = task;
-    return false;
+    storage[task -> name] = task;
+    return true;
 }
 void StorageMap :: update_t(Task *task) {
-    storage[task->name] = task;
+    storage[task -> name] = task;
 }
 bool StorageMap :: delete_t(Task *task) {
-    storage[task->name] = nullptr;
+    storage[task -> name] = nullptr;
     return true;
 }
 Task* StorageMap :: get_t(string name) {
@@ -24,8 +24,8 @@ Task* StorageMap :: get_t(string name) {
 }
 vector<Task*> StorageMap :: get_all_tasks_t() {
     vector<Task*> tasks;
-    for(pair<string,Task*> i : storage){
-        tasks.push_back(i.second);
+    for( pair<string,Task*> i : storage ){
+        tasks.push_back( i.second );
     }
     return tasks;
 }

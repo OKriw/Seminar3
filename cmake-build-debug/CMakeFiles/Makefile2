@@ -93,12 +93,12 @@ clean: CMakeFiles/TTimer.dir/clean
 CMakeFiles/TTimer.dir/all:
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/depend
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\TTimer.dir\build.make CMakeFiles/TTimer.dir/build
-	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\sidor\seminar3\Seminar3\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8 "Built target TTimer"
+	@$(CMAKE_COMMAND) -E cmake_echo_color --switch=$(COLOR) --progress-dir=C:\Users\sidor\seminar3\Seminar3\cmake-build-debug\CMakeFiles --progress-num=1,2,3,4,5,6,7,8,9 "Built target TTimer"
 .PHONY : CMakeFiles/TTimer.dir/all
 
 # Build rule for subdir invocation for target.
 CMakeFiles/TTimer.dir/rule: cmake_check_build_system
-	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sidor\seminar3\Seminar3\cmake-build-debug\CMakeFiles 8
+	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sidor\seminar3\Seminar3\cmake-build-debug\CMakeFiles 9
 	$(MAKE) $(MAKESILENT) -f CMakeFiles\Makefile2 CMakeFiles/TTimer.dir/all
 	$(CMAKE_COMMAND) -E cmake_progress_start C:\Users\sidor\seminar3\Seminar3\cmake-build-debug\CMakeFiles 0
 .PHONY : CMakeFiles/TTimer.dir/rule
